@@ -1,0 +1,43 @@
+[Info] Checking docker and cgroup
+[System] docker info > tmp.txt 2>&1
+[Info] Creating docker
+[System] docker run --name J20240823_235420 --cpus=1 -d python sh -c "trap \"exit\" TERM; while true; do sleep 1; done" > tmp.txt 2>&1
+[System] rm -f tmp.txt
+[System] docker cp ../../code/sample_1a J20240823_235420:/code >> log.txt 2>&1
+[System] cp -r ../../code/sample_1a code >> log.txt 2>&1
+[System] docker cp ../../test/1A J20240823_235420:/test >> log.txt 2>&1
+[System] cp -r ../../test/1A test >> log.txt 2>&1
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8688 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [13.7 kB]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [173 kB]
+Fetched 9129 kB in 2s (4708 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  time
+0 upgraded, 1 newly installed, 0 to remove and 88 not upgraded.
+Need to get 50.6 kB of archives.
+After this operation, 173 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main arm64 time arm64 1.9-0.2 [50.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 50.6 kB in 0s (478 kB/s)
+Selecting previously unselected package time.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23997 files and directories currently installed.)
+Preparing to unpack .../time_1.9-0.2_arm64.deb ...
+Unpacking time (1.9-0.2) ...
+Setting up time (1.9-0.2) ...
+[Info] Resetting cgroups
+[System] docker restart J20240823_235420 >> log.txt 2>&1
+J20240823_235420
+[System] docker update --memory 256m --memory-swap 256m J20240823_235420 >> log.txt 2>&1
+J20240823_235420
+[Info] Running
+[System] docker exec -i -w /code J20240823_235420 sh -c '( python main.py < /test/1.in > /test/1.out 2> /command_output.txt & pid=$!; echo $pid > /tmp/pidfile; /usr/bin/time -v -p python main.py < /test/1.in > /test/1.out 2>> /time_output.txt )'
+[System] docker exec J20240823_235420 test -f /tmp/pidfile && echo 'exists' || echo 'no'
+[System] docker exec J20240823_235420 cat /tmp/pidfile
+[System] exit_code = 256

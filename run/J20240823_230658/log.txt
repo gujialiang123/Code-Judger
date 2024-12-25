@@ -1,0 +1,9 @@
+[Info] Checking docker and cgroup
+[System] docker info > tmp.txt 2>&1
+[Info] Creating docker
+[System] docker run --name J20240823_230658 --cpus=1 -d python sh -c "trap \"exit\" TERM; while true; do sleep 1; done" > tmp.txt 2>&1
+[System] rm -f tmp.txt
+[System] docker cp ../../code/sample_1a J20240823_230658:/code >> log.txt 2>&1
+[System] cp -r ../../code/sample_1a code >> log.txt 2>&1
+[System] docker cp ../../test/1A J20240823_230658:/test >> log.txt 2>&1
+[System] cp -r ../../test/1A test >> log.txt 2>&1

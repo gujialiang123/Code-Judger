@@ -1,0 +1,137 @@
+description_text = {
+    '1A': """Theatre Square in the capital city of Berland has a rectangular shape with the size n×m meters. On the occasion of the city's anniversary, a decision was taken to pave the Square with square granite flagstones. Each flagstone is of the size a×a.
+What is the least number of flagstones needed to pave the Square? It's allowed to cover the surface larger than the Theatre Square, but the Square has to be covered. It's not allowed to break the flagstones. The sides of flagstones should be parallel to the sides of the Square.
+Input
+The input contains three positive integer numbers in the first line: n,m and a (1≤n,m,a≤10^9).
+Output
+Write the needed number of flagstones.
+""",
+    '339B': """Xenia lives in a city that has n houses built along the main ringroad. The ringroad houses are numbered 1 through n in the clockwise order. The ringroad traffic is one way and also is clockwise.
+
+Xenia has recently moved into the ringroad house number 1. As a result, she's got m things to do. In order to complete the i-th task, she needs to be in the house number ai and complete all tasks with numbers less than i. Initially, Xenia is in the house number 1, find the minimum time she needs to complete all her tasks if moving from a house to a neighboring one along the ringroad takes one unit of time.
+
+Input
+The first line contains two integers n and m (2≤n≤10^5,1≤m≤10^5). The second line contains m integers a1,a2,...,am (1≤ai≤n). Note that Xenia can have multiple consecutive tasks in one house.
+
+Output
+Print a single integer — the time Xenia needs to complete all tasks.
+""",
+    '584A': """
+    Olesya loves numbers consisting of n digits, and Rodion only likes numbers that are divisible by t. Find some number that satisfies both of them.
+
+Your task is: given the n and t print an integer strictly larger than zero consisting of n digits that is divisible by t. If such number doesn't exist, print -1.
+
+Input
+The single line contains two numbers, n and t (1≤n≤100, 2≤t≤10) — the length of the number and the number it should be divisible by.
+
+Output
+Print one such positive number without leading zeroes, — the answer to the problem, or -1, if such number doesn't exist. If there are multiple possible answers, you are allowed to print any of them.
+""",
+    '136A': """Little Petya very much likes gifts. Recently he has received a new laptop as a New Year gift from his mother. He immediately decided to give it to somebody else as what can be more pleasant than giving somebody gifts. And on this occasion he organized a New Year party at his place and invited n his friends there.
+If there's one thing Petya likes more that receiving gifts, that's watching others giving gifts to somebody else. Thus, he safely hid the laptop until the next New Year and made up his mind to watch his friends exchanging gifts while he does not participate in the process. He numbered all his friends with integers from 1 to n. Petya remembered that a friend number i gave a gift to a friend number pi. He also remembered that each of his friends received exactly one gift.
+Now Petya wants to know for each friend i the number of a friend who has given him a gift.
+Input
+The first line contains one integer n (1 <= n <= 100) - the quantity of friends Petya invited to the party. The second line contains n space-separated integers: the i-th number is pi - the number of a friend who gave a gift to friend number i. It is guaranteed that each friend received exactly one gift. It is possible that some friends do not share Petya's ideas of giving gifts to somebody else. Those friends gave the gifts to themselves.
+Output
+Print n space-separated integers: the i-th number should equal the number of the friend who gave a gift to friend number i."""
+    ,
+    '486A': """For a positive integer n let's define a function f:
+
+f(n) = - 1 + 2 - 3 + .. + (-1)n^n
+
+Your task is to calculate f(n) for a given integer n.
+
+Input
+The single line contains the positive integer n (1 <= n <= 10^15).
+
+Output
+Print f(n) in a single line.""",
+    '43A':
+        """One day Vasya decided to have a look at the results of Berland 1910 Football Championship's finals. Unfortunately he didn't find the overall score of the match; however, he got hold of a profound description of the match's process. On the whole there are n lines in that description each of which described one goal. Every goal was marked with the name of the team that had scored it. Help Vasya, learn the name of the team that won the finals. It is guaranteed that the match did not end in a tie.
+
+Input
+The first line contains an integer n (1 <= n <= 100) - the number of lines in the description. Then follow n lines - for each goal the names of the teams that scored it. The names are non-empty lines consisting of uppercase Latin letters whose lengths do not exceed 10 symbols. It is guaranteed that the match did not end in a tie and the description contains no more than two different teams.
+
+Output
+Print the name of the winning team. We remind you that in football the team that scores more goals is considered the winner."""
+    ,
+    '379A': """Vasily the Programmer loves romance, so this year he decided to illuminate his room with candles.
+
+Vasily has a candles.When Vasily lights up a new candle, it first burns for an hour and then it goes out. Vasily is smart, so he can make b went out candles into a new candle. As a result, this new candle can be used like any other new candle.
+
+Now Vasily wonders: for how many hours can his candles light up the room if he acts optimally well? Help him find this number.
+
+Input
+The single line contains two integers, a and b (1 <= n <= 1000; 2 <= n <= 1000).
+
+Output
+Print a single integer - the number of hours Vasily can light up the room for.""",
+    '102B': """
+    Having watched the last Harry Potter film, little Gerald also decided to practice magic. He found in his father's magical book a spell that turns any number in the sum of its digits. At the moment Gerald learned that, he came across a number n. How many times can Gerald put a spell on it until the number becomes one-digit?
+
+Input
+The first line contains the only integer n (0≤n≤10^100000). It is guaranteed that n doesn't contain any leading zeroes.
+
+Output
+Print the number of times a number can be replaced by the sum of its digits until it only contains one digit.
+    """,
+    '617A':
+        """An elephant decided to visit his friend. It turned out that the elephant's house is located at point 0 and his friend's house is located at point x(x>0) of the coordinate line. In one step the elephant can move 1, 2, 3, 4 or 5 positions forward. Determine, what is the minimum number of steps he need to make in order to get to his friend's house.
+
+Input
+The first line of the input contains an integer x (1≤x≤1000000) — The coordinate of the friend's house.
+
+Output
+Print the minimum number of steps that elephant needs to make to get from point 0 to point x.""",
+    '791A': """
+    Bear Limak wants to become the largest of bears, or at least to become larger than his brother Bob.
+
+Right now, Limak and Bob weigh a and b respectively. It's guaranteed that Limak's weight is smaller than or equal to his brother's weight.
+
+Limak eats a lot and his weight is tripled after every year, while Bob's weight is doubled after every year.
+
+After how many full years will Limak become strictly larger (strictly heavier) than Bob?
+
+Input
+The only line of the input contains two integers a and b (1≤a≤b≤10) — the weight of Limak and the weight of Bob respectively.
+
+Output
+Print one integer, denoting the integer number of years after which Limak will become strictly larger than Bob.""",
+    '977A':
+        """Little girl Tanya is learning how to decrease a number by one, but she does it wrong with a number consisting of two or more digits. Tanya subtracts one from a number by the following algorithm:
+    if the last digit of the number is non-zero, she decreases the number by one;
+    if the last digit of the number is zero, she divides the number by 10 (i.e. removes the last digit).
+    You are given an integer number 𝑛. Tanya will subtract one from it 𝑘 times. Your task is to print the result after all 𝑘 subtractions.
+It is guaranteed that the result will be positive integer number.
+
+Input
+The first line of the input contains two integer numbers 𝑛 and 𝑘 (2≤𝑛≤10^9, 1≤𝑘≤50) — the number from which Tanya will subtract and the number of subtractions correspondingly.
+
+Output
+Print one integer number — the result of the decreasing 𝑛 by one 𝑘 times.
+
+It is guaranteed that the result will be positive integer number.""",
+    '490A':
+        """The School №0 of the capital of Berland has n children studying in it. All the children in this school are gifted: some of them are good at programming, some are good at maths, others are good at PE (Physical Education). Hence, for each child we know value ti:
+ti=1, if the i-th child is good at programming,
+ti=2, if the i-th child is good at maths,
+ti=3, if the i-th child is good at PE
+Each child happens to be good at exactly one of these three subjects.
+
+The Team Scientific Decathlon Olympias requires teams of three students. The school teachers decided that the teams will be composed of three children that are good at different subjects. That is, each team must have one mathematician, one programmer and one sportsman. Of course, each child can be a member of no more than one team.
+
+What is the maximum number of teams that the school will be able to present at the Olympiad? How should the teams be formed for that?
+
+Input
+The first line contains integer n (1≤n≤5000) — the number of children in the school. The second line contains n integers t1,t2,...,tn (1≤ti≤3), where ti describes the skill of the i-th child.
+
+Output
+In the first line output integer w — the largest possible number of teams.
+
+Then print w lines, containing three numbers in each line. Each triple represents the indexes of the children forming the team. You can print both the teams, and the numbers in the triplets in any order. The children are numbered from 1 to n in the order of their appearance in the input. Each child must participate in no more than one team. If there are several solutions, print any of them.
+
+If no teams can be compiled, print the only line with value w equal to 0.
+
+"""
+
+}
